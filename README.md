@@ -36,9 +36,9 @@ The summary statistics computed on the traffic signs data set are as follows:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set.
+This section contains an exploratory visualization of the data set.
 
-I created a histogram from the distribution of the labels in the dataset and the distribution is as follows:
+I created a bar chart from the distribution of the labels in the dataset and the distribution is as follows:
 
 <p align="center">
   <img src="./output_images/dataset_summary.png" width="100%"/>
@@ -84,7 +84,7 @@ Here is the distribution of the labels in the dataset after rebalancing it:
 </p>
 
 
-The new augmented training dataset is now an oversampled version of the original training dataset and different instances within each label is occurs multiple times within the dataset with that label.
+The new augmented training dataset is now an oversampled version of the original training dataset and different instances within each label occurs multiple times within the dataset with that label.
 
 After the oversampling, the dataset summary is as follows:
 
@@ -160,7 +160,7 @@ My approach to solve the problem of traffic sign classification is as follows:
 
 * The final model's performance was high (above 93%) across all the datasets (training, testing, validation) - This provides evidence that the model generalizes well and works on new "unseen" data.
 
-The validation accuracy on during the training set is as follows:
+The validation accuracy during the training phase is as follows:
 
 <p align="center">
   <img src="./output_images/validation_accuracy.png" width="60%"/>
@@ -188,7 +188,7 @@ The images above are hard to classify due to the following reasons:
 * Have different sizes
 * Have watermarks in them that could influence the prediction
 * Have different backgrounds
-* None of them are in the dataset
+* None of them are in the dataset - completely new data
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -204,7 +204,7 @@ Here are the results of the prediction:
 | 60kpmh speed limit			|  End of speed limit 80 kmph    							|
 
 
-The model was able to correctly guess 9 of the 10 traffic signs in all the images tested, which gives an accuracy of 90%.
+The model was able to correctly predict 9 of the 10 traffic signs in all the images tested, which gives an accuracy of `90%` similar to that of the test set accuracy `(93.6%)`.
 
 The only image that it got the prediction wrong was on the `60 kmph` sign.
 
@@ -320,4 +320,4 @@ The prediction here is accurate with an almost `100%` certainty.
 | 'Speed limit 50km/h' |  0.0016182127 |
 | 'Speed limit 30km/h' |  0.00021832314 |
 
-The prediction here is wrong. However, it does predict the correct label as the second guess with a `23%` certainty. The reason the model has gone wrong here could possibly the fact that the digit `6` is very similar to `8`, as a result, the features extracted from this image might have been very similar to that of the `End of Speed limit 80km/h` sign.
+The prediction here is wrong. However, it does predict the correct label as the second guess with a `23%` certainty. The reason the model has gone wrong here could possibly be the fact that the digit `6` is very similar to `8`, as a result, the features extracted from this image might have been very similar to that of the `End of Speed limit 80km/h` sign and as a result, the model predicted it to be the other sign.
