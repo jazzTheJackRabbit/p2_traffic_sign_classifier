@@ -15,7 +15,6 @@ The goals / steps of this project are the following:
 
 ## [Rubric Points](https://review.udacity.com/#!/rubrics/481/view)
 
----
 #### Source Code Structure Overview
 
 All the source code to classify traffic signs is contained in the following notebook:
@@ -26,7 +25,7 @@ All the source code to classify traffic signs is contained in the following note
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I calculated the summary statistics of the traffic signs data set as follows:
+The summary statistics computed on the traffic signs data set are as follows:
 
 * The size of training set is `34799`
 * The size of the validation set is `4410`
@@ -231,6 +230,8 @@ The softmax probabilities for each of the above test images are as follows:
 | 'Traffic signals' |  5.5691258e-25 |
 | 'Stop' |  4.7984333e-25 |
 
+The prediction here is accurate with an almost `100%` certainty.
+
 #### Example 2:
 ---
 
@@ -246,6 +247,8 @@ The softmax probabilities for each of the above test images are as follows:
 | 'Keep left' |  2.4755906e-11 |
 | 'Roundabout mandatory' |  1.1541692e-12 |
 | 'Speed limit 20km/h' |  1.5786992e-13 |
+
+The prediction here is accurate with an almost `100%` certainty.
 
 #### Example 3:
 ---
@@ -263,6 +266,8 @@ The softmax probabilities for each of the above test images are as follows:
 | 'Pedestrians' |  1.8229017e-09 |
 | 'Beware of ice/snow' |  1.4521996e-09 |
 
+The prediction here is accurate with an almost `99%` certainty.
+
 #### Example 4:
 ---
 
@@ -278,6 +283,8 @@ The softmax probabilities for each of the above test images are as follows:
 | 'Roundabout mandatory' |  2.4020729e-36 |
 | 'Speed limit 20km/h' |  0.0 |
 | 'Speed limit 30km/h' |  0.0 |
+
+The prediction here is accurate with an almost `100%` certainty.
 
 #### Example 5:
 ---
@@ -295,9 +302,10 @@ The softmax probabilities for each of the above test images are as follows:
 | 'General caution' |  2.3848029e-25 |
 | 'Turn right ahead' |  5.5996496e-26 |
 
+The prediction here is accurate with an almost `100%` certainty.
+
 #### Example 6:
 ---
-
 
 <p align="left">
   <img src="./output_images/60.jpg" width="15%"/>
@@ -311,3 +319,5 @@ The softmax probabilities for each of the above test images are as follows:
 | 'Speed limit 80km/h' |  0.037582275 |
 | 'Speed limit 50km/h' |  0.0016182127 |
 | 'Speed limit 30km/h' |  0.00021832314 |
+
+The prediction here is wrong. However, it does predict the correct label as the second guess with a `23%` certainty. The reason the model has gone wrong here could possibly the fact that the digit `6` is very similar to `8`, as a result, the features extracted from this image might have been very similar to that of the `End of Speed limit 80km/h` sign.
