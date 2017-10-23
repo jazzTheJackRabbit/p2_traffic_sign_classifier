@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 
 All the source code to classify traffic signs is contained in the following notebook:
 
-* `P2.ipynb`
+* `Traffic_Sign_Classifier.ipynb`
 
 ### Data Set Summary & Exploration
 
