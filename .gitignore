@@ -11,3 +11,4 @@ pip-selfcheck.json
 
 .ipynb_checkpoints
 .Python
+__pycache__
